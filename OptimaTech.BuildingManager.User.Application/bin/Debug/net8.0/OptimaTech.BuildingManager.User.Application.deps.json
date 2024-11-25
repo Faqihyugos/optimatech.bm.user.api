@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "OptimaTech.BuildingManager.User.Application/1.0.0": {
+        "dependencies": {
+          "OptimaTech.BuildingManager.User.Core": "1.0.0"
+        },
+        "runtime": {
+          "OptimaTech.BuildingManager.User.Application.dll": {}
+        }
+      },
+      "OptimaTech.BuildingManager.User.Core/1.0.0": {
+        "runtime": {
+          "OptimaTech.BuildingManager.User.Core.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "OptimaTech.BuildingManager.User.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "OptimaTech.BuildingManager.User.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

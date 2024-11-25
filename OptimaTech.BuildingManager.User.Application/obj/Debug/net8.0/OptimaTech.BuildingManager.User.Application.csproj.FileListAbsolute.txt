@@ -1,0 +1,15 @@
+/Users/administrator/Documents/project/magang/optimatech.bm.user.api/OptimaTech.BuildingManager.User.Application/bin/Debug/net8.0/OptimaTech.BuildingManager.User.Application.deps.json
+/Users/administrator/Documents/project/magang/optimatech.bm.user.api/OptimaTech.BuildingManager.User.Application/bin/Debug/net8.0/OptimaTech.BuildingManager.User.Application.dll
+/Users/administrator/Documents/project/magang/optimatech.bm.user.api/OptimaTech.BuildingManager.User.Application/bin/Debug/net8.0/OptimaTech.BuildingManager.User.Application.pdb
+/Users/administrator/Documents/project/magang/optimatech.bm.user.api/OptimaTech.BuildingManager.User.Application/bin/Debug/net8.0/OptimaTech.BuildingManager.User.Core.dll
+/Users/administrator/Documents/project/magang/optimatech.bm.user.api/OptimaTech.BuildingManager.User.Application/bin/Debug/net8.0/OptimaTech.BuildingManager.User.Core.pdb
+/Users/administrator/Documents/project/magang/optimatech.bm.user.api/OptimaTech.BuildingManager.User.Application/obj/Debug/net8.0/OptimaTech.BuildingManager.User.Application.csproj.AssemblyReference.cache
+/Users/administrator/Documents/project/magang/optimatech.bm.user.api/OptimaTech.BuildingManager.User.Application/obj/Debug/net8.0/OptimaTech.BuildingManager.User.Application.GeneratedMSBuildEditorConfig.editorconfig
+/Users/administrator/Documents/project/magang/optimatech.bm.user.api/OptimaTech.BuildingManager.User.Application/obj/Debug/net8.0/OptimaTech.BuildingManager.User.Application.AssemblyInfoInputs.cache
+/Users/administrator/Documents/project/magang/optimatech.bm.user.api/OptimaTech.BuildingManager.User.Application/obj/Debug/net8.0/OptimaTech.BuildingManager.User.Application.AssemblyInfo.cs
+/Users/administrator/Documents/project/magang/optimatech.bm.user.api/OptimaTech.BuildingManager.User.Application/obj/Debug/net8.0/OptimaTech.BuildingManager.User.Application.csproj.CoreCompileInputs.cache
+/Users/administrator/Documents/project/magang/optimatech.bm.user.api/OptimaTech.BuildingManager.User.Application/obj/Debug/net8.0/OptimaTe.4B48459D.Up2Date
+/Users/administrator/Documents/project/magang/optimatech.bm.user.api/OptimaTech.BuildingManager.User.Application/obj/Debug/net8.0/OptimaTech.BuildingManager.User.Application.dll
+/Users/administrator/Documents/project/magang/optimatech.bm.user.api/OptimaTech.BuildingManager.User.Application/obj/Debug/net8.0/refint/OptimaTech.BuildingManager.User.Application.dll
+/Users/administrator/Documents/project/magang/optimatech.bm.user.api/OptimaTech.BuildingManager.User.Application/obj/Debug/net8.0/OptimaTech.BuildingManager.User.Application.pdb
+/Users/administrator/Documents/project/magang/optimatech.bm.user.api/OptimaTech.BuildingManager.User.Application/obj/Debug/net8.0/ref/OptimaTech.BuildingManager.User.Application.dll

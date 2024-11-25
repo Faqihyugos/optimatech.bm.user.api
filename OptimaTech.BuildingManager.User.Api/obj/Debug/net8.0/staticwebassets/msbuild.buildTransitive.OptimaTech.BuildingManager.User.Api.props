@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../buildMultiTargeting/OptimaTech.BuildingManager.User.Api.props" />
+</Project>

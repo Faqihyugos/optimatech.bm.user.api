@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "Y+CWq1sSTgpkYnNWkbBFsULNR80xZNI2R4Rbq1N901Y=",
+  "Source": "OptimaTech.BuildingManager.User.Api",
+  "BasePath": "_content/OptimaTech.BuildingManager.User.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
