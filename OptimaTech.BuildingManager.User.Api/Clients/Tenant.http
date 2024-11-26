@@ -1,0 +1,64 @@
+@OptimaTech.BuildingManager.User.Api_HostAddress = http://localhost:7066/v1
+
+GET {{OptimaTech.BuildingManager.User.Api_HostAddress}}/tenants/
+Accept: application/json
+Tenant-Code: 00000000-0000-0000-0000-000000000001
+User-Code: 00000000-0000-0000-0000-000000000999
+
+###
+
+
+GET {{OptimaTech.BuildingManager.User.Api_HostAddress}}/tenants?name=PT&page=1&pageSize=50
+Accept: application/json
+Tenant-Code: 00000000-0000-0000-0000-000000000001
+User-Code: 00000000-0000-0000-0000-000000000999
+
+###
+
+GET {{OptimaTech.BuildingManager.User.Api_HostAddress}}/tenants/00000000-0000-0000-0000-000000000001
+Accept: application/json
+Tenant-Code: 00000000-0000-0000-0000-000000000001
+User-Code: 00000000-0000-0000-0000-000000000999
+
+###
+
+
+GET {{OptimaTech.BuildingManager.User.Api_HostAddress}}/tenants/9c6290d5-b4a9-48d9-913d-14eaba6bd478
+Accept: application/json
+Tenant-Code: 00000000-0000-0000-0000-000000000001
+User-Code: 00000000-0000-0000-0000-000000000999
+
+###
+
+POST {{OptimaTech.BuildingManager.User.Api_HostAddress}}/tenants/
+Content-Type: application/json
+Tenant-Code: 00000000-0000-0000-0000-000000000001
+User-Code: 00000000-0000-0000-0000-000000000999
+
+{
+  "Code":"T001",
+  "Name":"PT Setia Abadi",
+  "Description":"Perusahaan Setia Abadi"
+}
+###
+
+
+PUT {{OptimaTech.BuildingManager.User.Api_HostAddress}}/tenants/9c6290d5-b4a9-48d9-913d-14eaba6bd478
+Content-Type: application/json
+Tenant-Code: 00000000-0000-0000-0000-000000000001
+User-Code: 00000000-0000-0000-0000-000000000999
+
+{
+  "Code":"T001",
+  "Name":"PT Setia Abadi XX",
+  "Description":"Setia Abadi XX"
+}
+###
+
+
+DELETE {{OptimaTech.BuildingManager.User.Api_HostAddress}}/tenants/9c6290d5-b4a9-48d9-913d-14eaba6bd478
+Content-Type: application/json
+Tenant-Code: 00000000-0000-0000-0000-000000000001
+User-Code: 00000000-0000-0000-0000-000000000999
+
+###

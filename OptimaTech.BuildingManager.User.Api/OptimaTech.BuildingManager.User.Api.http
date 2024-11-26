@@ -1,6 +1,0 @@
-@OptimaTech.BuildingManager.User.Api_HostAddress = http://localhost:5066
-
-GET {{OptimaTech.BuildingManager.User.Api_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
