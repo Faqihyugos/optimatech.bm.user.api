@@ -1,0 +1,40 @@
+# Ignore bin and obj directories (for all projects in the solution)
+**/bin/
+**/obj/
+
+# Ignore Windows-specific system files
+Thumbs.db
+ehthumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# Ignore build output, packages, and artifacts
+artifacts/
+packages/
+**/out/
+
+# Ignore user-specific and temp files
+*.tmp
+*.log
+*.user
+*.rsuser
+*.suo
+*.cache
+*.pdb
+
+# Ignore Visual Studio and Visual Studio Code settings
+.vs/
+.vscode/
+*.code-workspace
+
+# Ignore environment and configuration files
+*.config
+*.env
+*.local.settings.json
+
+# Ignore JetBrains Rider settings
+.idea/
+
+# Ignore NuGet packages and lock files (optional)
+*.nupkg
+project.lock.json
