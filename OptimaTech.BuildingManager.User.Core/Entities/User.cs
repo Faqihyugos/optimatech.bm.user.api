@@ -3,7 +3,6 @@ namespace OptimaTech.BuildingManager.User.Core.Entities;
 public class User : EntityBase
 {
     public required Guid RoleId { get; set; }
-    public required Guid PropertyUnitId { get; set; }
     public required string UserName { get; set; }
     public required string Password { get; set; }
     public required DateTime BirthDate { get; set; }
@@ -23,6 +22,5 @@ public class User : EntityBase
     public required Status StatusApproval { get; set; }
     
     public Role? Role { get; set; }
-    public PropertyUnit? PropertyUnit { get; set; }
 
 }
