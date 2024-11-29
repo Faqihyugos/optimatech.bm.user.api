@@ -9,4 +9,9 @@ public static class Extensions
     {
         return new Tenant() { Id = model.Id, TenantId = model.TenantId, Code = model.Code, Name = model.Name, Description = model.Description };
     }
+
+      public static Role ToRole(this RoleApplicationModel model)
+    {
+        return new Role() { Id = model.Id, TenantId = model.TenantId, Code = model.Code, Name = model.Name};
+    }
 }

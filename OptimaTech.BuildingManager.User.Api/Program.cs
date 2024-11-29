@@ -16,6 +16,7 @@ builder.Services.AddSwaggerGen();
 
 //Add Service
 TenantServices.Add(builder);
+RoleServices.Add(builder);
 
 var app = builder.Build();
 
@@ -33,6 +34,7 @@ app.UseMiddleware<CheckCodeHeaderMiddleware>();
 
 //Mapping Route
 TenantRoute.Map(app);
+RoleRoute.Map(app);
 
 
 app.Run();
