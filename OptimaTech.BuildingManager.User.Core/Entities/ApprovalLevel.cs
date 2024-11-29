@@ -6,7 +6,7 @@ public class ApprovalLevel : IBasic
     public required Guid TenantId { get; set; }
     public required Guid RoleId { get; set; }
     public required Guid RequestTypeId { get; set; }
-    public required Level Name { get; set; }
+    public required string Name { get; set; }
     public required int sequence { get; set; }
 
     public Role? Role { get; set; }

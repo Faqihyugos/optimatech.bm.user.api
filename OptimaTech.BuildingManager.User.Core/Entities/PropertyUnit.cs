@@ -8,8 +8,8 @@ public class PropertyUnit: EntityBase
     public required string UnitNumber { get; set; }
     public required int FloorNumber { get; set; }
     public required string UnitType { get; set; }
-    public StatusUnit StatusUnit { get; set; }
-    public TowerType TowerType { get; set; }
+    public required string StatusUnit { get; set; }
+    public required string TowerType { get; set; }
 
     public Project? Project { get; set; }
 }

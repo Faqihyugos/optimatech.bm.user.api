@@ -17,15 +17,11 @@ public class User : EntityBase
     public string? Email { get; set; }
     public string? MobilePhone { get; set; }
     public Religion Religion { get; set; }
-    public Occupation occupation{ get; set; }
+    public required string Occupation{ get; set; }
     public required Status Status { get; set; }
-    public required UserType UserType { get; set; }
-    public required string UnitNumber { get; set; }
-    public required string NoBAST{ get; set; }
-    public required DateTime DateBAST{ get; set; }
+    public required string UserType { get; set; }
     public required Status StatusApproval { get; set; }
     
-
     public Role? Role { get; set; }
     public PropertyUnit? PropertyUnit { get; set; }
 
