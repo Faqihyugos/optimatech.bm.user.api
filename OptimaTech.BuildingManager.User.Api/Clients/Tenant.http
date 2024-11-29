@@ -1,4 +1,4 @@
-@OptimaTech.BuildingManager.User.Api_HostAddress = http://localhost:7066/v1
+@OptimaTech.BuildingManager.User.Api_HostAddress = https://localhost:7066/v1
 
 GET {{OptimaTech.BuildingManager.User.Api_HostAddress}}/tenants/
 Accept: application/json
