@@ -1,7 +1,7 @@
 namespace OptimaTech.BuildingManager.User.Core.Entities;
 
 
-public enum Status
+public enum ApprovalStatus
 {
     Pending = 1,
     Approved = 2,
@@ -17,4 +17,35 @@ public enum Religion
     Budha = 4,
     Hindu = 5,
     Konghucu = 6,
+}
+
+public enum UserStatus
+{
+    Owner = 1,
+    Occupant = 2, 
+    Renter = 3, 
+    Agent = 4,
+}
+
+public enum UnitStatus
+{
+    Available = 1,
+    Inhabited = 2,
+    Leased = 3,
+    FitOut = 4,
+}
+
+public enum RelationStatus
+{
+    NotActive = 0,
+    Active = 1,
+    Inactive = 2,
+}
+
+public enum RelationType
+{
+    Owner = 1,
+    Occupant = 2, 
+    Renter = 3, 
+    Agent = 4,
 }

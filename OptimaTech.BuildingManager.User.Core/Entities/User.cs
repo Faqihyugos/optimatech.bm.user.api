@@ -17,9 +17,9 @@ public class User : EntityBase
     public string? MobilePhone { get; set; }
     public Religion Religion { get; set; }
     public required string Occupation{ get; set; }
-    public required Status Status { get; set; }
+    public required UserStatus UserStatus { get; set; }
     public required string UserType { get; set; }
-    public required Status StatusApproval { get; set; }
+    public required ApprovalStatus ApprovalStatus { get; set; }
     
     public Role? Role { get; set; }
 
