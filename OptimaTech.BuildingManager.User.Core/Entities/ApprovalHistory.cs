@@ -6,7 +6,7 @@ public class ApprovalHistory : EntityBase
     public required Guid UserId { get; set; }
     public required Guid ApprovalLevelId { get; set; }
     public required string Comment { get; set; }
-    public required Status Status { get; set; }
+    public required ApprovalStatus ApprovalStatus { get; set; }
     public required DateTime CreatedDate { get; set; }
 
     public ApprovalLevel? ApprovalLevel { get; set; }

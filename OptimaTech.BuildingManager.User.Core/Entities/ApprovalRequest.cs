@@ -5,7 +5,7 @@ public class ApprovalRequest : EntityBase
    
     public required Guid RequestTypeId { get; set; }
     public required Guid ApprovalLevelId { get; set; }
-    public required Status Status { get; set; }
+    public required ApprovalStatus ApprovalStatus { get; set; }
     public DateTime? Date { get; set; }
 
     public RequestType? RequestType { get; set; }
