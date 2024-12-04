@@ -8,6 +8,7 @@ public class AppDbContext : DbContext
 {
     public DbSet<TenantApplicationModel> Tenants { get; set; }
     public DbSet<RoleApplicationModel> Roles { get; set; }
+    public DbSet<ProjectApplicationModel> Projects { get; set; }
 
     public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
     {
@@ -51,6 +52,21 @@ public class AppDbContext : DbContext
             entity.Property(e => e.DeletedDate).HasColumnType("timestamp without time zone");
             entity.Property(e => e.DeletedUserId);
             entity.HasIndex(o => o.Code).HasDatabaseName("IX_Role_Code").IsUnique();
+        });
+
+        modelBuilder.Entity<ProjectApplicationModel>(entity =>
+        {
+            entity.HasKey(e => e.Id);
+            entity.Property(e => e.Code).IsRequired();
+            entity.Property(e => e.Name).IsRequired();
+            entity.Property(e => e.Deleted).IsRequired();
+            entity.Property(e => e.CreatedDate).HasColumnType("timestamp without time zone");
+            entity.Property(e => e.CreatedUserId);
+            entity.Property(e => e.UpdatedDate).HasColumnType("timestamp without time zone");
+            entity.Property(e => e.UpdatedUserId);
+            entity.Property(e => e.DeletedDate).HasColumnType("timestamp without time zone");
+            entity.Property(e => e.DeletedUserId);
+            entity.HasIndex(o => o.Code).HasDatabaseName("IX_Project_Code").IsUnique();
         });
 
     }

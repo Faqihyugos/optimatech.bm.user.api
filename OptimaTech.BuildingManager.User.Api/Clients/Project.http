@@ -1,0 +1,62 @@
+@OptimaTech.BuildingManager.User.Api_HostAddress = https://localhost:7066/v1
+
+GET {{OptimaTech.BuildingManager.User.Api_HostAddress}}/projects/
+Accept: application/json
+Tenant-Code: 00000000-0000-0000-0000-000000000001
+User-Code: 00000000-0000-0000-0000-000000000999
+
+###
+
+
+GET {{OptimaTech.BuildingManager.User.Api_HostAddress}}/projects?name=Mall&page=1&pageSize=50
+Accept: application/json
+Tenant-Code: 00000000-0000-0000-0000-000000000001
+User-Code: 00000000-0000-0000-0000-000000000999
+
+###
+
+GET {{OptimaTech.BuildingManager.User.Api_HostAddress}}/projects/33254bdb-41a3-4f67-9dc7-6028ad5e166d
+Accept: application/json
+Tenant-Code: 00000000-0000-0000-0000-000000000001
+User-Code: 00000000-0000-0000-0000-000000000999
+
+###
+
+
+GET {{OptimaTech.BuildingManager.User.Api_HostAddress}}/projects/33254bdb-41a3-4f67-9dc7-6028ad5e166d
+Accept: application/json
+Tenant-Code: 00000000-0000-0000-0000-000000000001
+User-Code: 00000000-0000-0000-0000-000000000999
+
+###
+
+POST {{OptimaTech.BuildingManager.User.Api_HostAddress}}/projects/
+Content-Type: application/json
+Tenant-Code: 00000000-0000-0000-0000-000000000001
+User-Code: 00000000-0000-0000-0000-000000000999
+
+{
+  "Code":"P001",
+  "Name":"Mall"
+}
+###
+
+
+PUT {{OptimaTech.BuildingManager.User.Api_HostAddress}}/projects/33254bdb-41a3-4f67-9dc7-6028ad5e166d
+Content-Type: application/json
+Tenant-Code: 00000000-0000-0000-0000-000000000001
+User-Code: 00000000-0000-0000-0000-000000000999
+
+{
+  "Code":"P001",
+  "Name":"Mall Industri"
+}
+###
+
+
+DELETE {{OptimaTech.BuildingManager.User.Api_HostAddress}}/projects/5cb312a8-637a-4e15-9a6d-29a0493c13b4
+Content-Type: application/json
+Tenant-Code: 00000000-0000-0000-0000-000000000001
+User-Code: 00000000-0000-0000-0000-000000000999
+
+###
