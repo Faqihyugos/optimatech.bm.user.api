@@ -79,7 +79,7 @@ public static class ProjectRoute
         }
     }
 
-    private static async Task<Results<Created<ApiResponse<ProjectResponse>>, BadRequest<ApiResponse<ProjectResponse>>>> CreateProject([FromHeader(Name = "Tenant-Code")] Guid tenantId, [FromHeader(Name = "User-Code")] Guid userId, TenantRequest request, [FromKeyedServices(AppConst.SERVICE_KEY_CREATE)] IUseCase<ProjectApplicationModel, bool> useCase)
+    private static async Task<Results<Created<ApiResponse<ProjectResponse>>, BadRequest<ApiResponse<ProjectResponse>>>> CreateProject([FromHeader(Name = "Tenant-Code")] Guid tenantId, [FromHeader(Name = "User-Code")] Guid userId, ProjectRequest request, [FromKeyedServices(AppConst.SERVICE_KEY_CREATE)] IUseCase<ProjectApplicationModel, bool> useCase)
     {
         Guid newId = Guid.NewGuid();
         ProjectApplicationModel project = new ProjectApplicationModel() { Id = newId, TenantId = tenantId, Code = request.Code, Name = request.Name, Deleted = false, CreatedDate = DateTime.Now, CreatedUserId = userId };
@@ -101,7 +101,7 @@ public static class ProjectRoute
         }
     }
 
-    private static async Task<Results<Ok<ApiResponse<ProjectResponse>>, BadRequest<ApiResponse<ProjectResponse>>>> UpdateProject([FromHeader(Name = "Tenant-Code")] Guid tenantId, [FromHeader(Name = "User-Code")] Guid userId, Guid id, TenantRequest request, [FromKeyedServices(AppConst.SERVICE_KEY_UPDATE)] IUseCase<ProjectApplicationModel, bool> useCase)
+    private static async Task<Results<Ok<ApiResponse<ProjectResponse>>, BadRequest<ApiResponse<ProjectResponse>>>> UpdateProject([FromHeader(Name = "Tenant-Code")] Guid tenantId, [FromHeader(Name = "User-Code")] Guid userId, Guid id, ProjectRequest request, [FromKeyedServices(AppConst.SERVICE_KEY_UPDATE)] IUseCase<ProjectApplicationModel, bool> useCase)
     {
         ProjectApplicationModel project = new ProjectApplicationModel() { Id = id, TenantId = tenantId, Code = request.Code, Name = request.Name, Deleted = false, UpdatedDate = DateTime.Now, UpdatedUserId = userId };
 
