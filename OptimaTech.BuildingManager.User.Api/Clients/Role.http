@@ -8,7 +8,7 @@ User-Code: 00000000-0000-0000-0000-000000000999
 ###
 
 
-GET {{OptimaTech.BuildingManager.User.Api_HostAddress}}/roles?name=PT&page=1&pageSize=50
+GET {{OptimaTech.BuildingManager.User.Api_HostAddress}}/roles?name=Admin&page=1&pageSize=50
 Accept: application/json
 Tenant-Code: 00000000-0000-0000-0000-000000000001
 User-Code: 00000000-0000-0000-0000-000000000999
@@ -30,7 +30,7 @@ User-Code: 00000000-0000-0000-0000-000000000999
 
 ###
 
-POST {{OptimaTech.BuildingManager.User.Api_HostAddress}}/v1/roles/
+POST {{OptimaTech.BuildingManager.User.Api_HostAddress}}/roles/
 Content-Type: application/json
 Tenant-Code: 00000000-0000-0000-0000-000000000001
 User-Code: 00000000-0000-0000-0000-000000000999
