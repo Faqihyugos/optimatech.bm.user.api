@@ -79,7 +79,7 @@ public static class RoleRoute
         }
     }
 
-    private static async Task<Results<Created<ApiResponse<RoleResponse>>, BadRequest<ApiResponse<RoleResponse>>>> CreateRole([FromHeader(Name = "Tenant-Code")] Guid tenantId, [FromHeader(Name = "User-Code")] Guid userId, TenantRequest request, [FromKeyedServices(AppConst.SERVICE_KEY_CREATE)] IUseCase<RoleApplicationModel, bool> useCase)
+    private static async Task<Results<Created<ApiResponse<RoleResponse>>, BadRequest<ApiResponse<RoleResponse>>>> CreateRole([FromHeader(Name = "Tenant-Code")] Guid tenantId, [FromHeader(Name = "User-Code")] Guid userId, RoleRequest request, [FromKeyedServices(AppConst.SERVICE_KEY_CREATE)] IUseCase<RoleApplicationModel, bool> useCase)
     {
         Guid newId = Guid.NewGuid();
         RoleApplicationModel role = new RoleApplicationModel() { Id = newId, TenantId = tenantId, Code = request.Code, Name = request.Name, Deleted = false, CreatedDate = DateTime.Now, CreatedUserId = userId };
@@ -101,7 +101,7 @@ public static class RoleRoute
         }
     }
 
-    private static async Task<Results<Ok<ApiResponse<RoleResponse>>, BadRequest<ApiResponse<RoleResponse>>>> UpdateRole([FromHeader(Name = "Tenant-Code")] Guid tenantId, [FromHeader(Name = "User-Code")] Guid userId, Guid id, TenantRequest request, [FromKeyedServices(AppConst.SERVICE_KEY_UPDATE)] IUseCase<RoleApplicationModel, bool> useCase)
+    private static async Task<Results<Ok<ApiResponse<RoleResponse>>, BadRequest<ApiResponse<RoleResponse>>>> UpdateRole([FromHeader(Name = "Tenant-Code")] Guid tenantId, [FromHeader(Name = "User-Code")] Guid userId, Guid id, RoleRequest request, [FromKeyedServices(AppConst.SERVICE_KEY_UPDATE)] IUseCase<RoleApplicationModel, bool> useCase)
     {
         RoleApplicationModel role = new RoleApplicationModel() { Id = id, TenantId = tenantId, Code = request.Code, Name = request.Name, Deleted = false, UpdatedDate = DateTime.Now, UpdatedUserId = userId };
 
