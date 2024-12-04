@@ -19,4 +19,9 @@ public static class Extensions
     {
         return new Project() { Id = model.Id, TenantId = model.TenantId, Code = model.Code, Name = model.Name};
     }
+
+    public static Unit ToUnit(this UnitApplicationModel model)
+    {
+        return new Unit() { Id = model.Id, TenantId = model.TenantId, Code = model.Code, Name = model.Name, ProjectId = model.ProjectId, BuildingName = model.BuildingName, FloorNumber = model.FloorNumber, UnitNumber = model.UnitNumber, UnitStatus = model.UnitStatus, UnitType = model.UnitType };
+    }
 }
