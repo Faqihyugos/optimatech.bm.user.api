@@ -122,7 +122,7 @@ public static class RoleRoute
         }
     }
 
-    private static async Task<Results<Ok<ApiResponse<bool>>, BadRequest<ApiResponse<bool>>>> DeleteRole([FromHeader(Name = "Tenant-Code")] Guid tenantId, [FromHeader(Name = "User-Code")] Guid userId, Guid id, [FromKeyedServices("Tenant")] IUseCase<DeleteParameter, bool> useCase)
+    private static async Task<Results<Ok<ApiResponse<bool>>, BadRequest<ApiResponse<bool>>>> DeleteRole([FromHeader(Name = "Tenant-Code")] Guid tenantId, [FromHeader(Name = "User-Code")] Guid userId, Guid id, [FromKeyedServices("Role")] IUseCase<DeleteParameter, bool> useCase)
     {
         try
         {

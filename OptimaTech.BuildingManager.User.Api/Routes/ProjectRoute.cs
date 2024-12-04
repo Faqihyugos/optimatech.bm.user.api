@@ -122,7 +122,7 @@ public static class ProjectRoute
         }
     }
 
-    private static async Task<Results<Ok<ApiResponse<bool>>, BadRequest<ApiResponse<bool>>>> DeleteProject([FromHeader(Name = "Tenant-Code")] Guid tenantId, [FromHeader(Name = "User-Code")] Guid userId, Guid id, [FromKeyedServices("Tenant")] IUseCase<DeleteParameter, bool> useCase)
+    private static async Task<Results<Ok<ApiResponse<bool>>, BadRequest<ApiResponse<bool>>>> DeleteProject([FromHeader(Name = "Tenant-Code")] Guid tenantId, [FromHeader(Name = "User-Code")] Guid userId, Guid id, [FromKeyedServices("Project")] IUseCase<DeleteParameter, bool> useCase)
     {
         try
         {
