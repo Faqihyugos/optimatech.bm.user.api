@@ -11,6 +11,8 @@ public class AppDbContext : DbContext
     public DbSet<ProjectApplicationModel> Projects { get; set; }
     public DbSet<UnitApplicationModel> Units { get; set; }
 
+    public DbSet<UserApplicationModel> Users { get; set; }
+
     public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
     {
     }
@@ -91,6 +93,41 @@ public class AppDbContext : DbContext
             entity.Property(e => e.DeletedDate).HasColumnType("timestamp without time zone");
             entity.Property(e => e.DeletedUserId);
             entity.HasIndex(o => o.Code).HasDatabaseName("IX_Unit_Code").IsUnique();
+        });
+
+        modelBuilder.Entity<UserApplicationModel>(entity =>
+        {
+            entity.HasKey(e => e.Id);
+            entity.Property(e => e.Code).IsRequired();
+            entity.Property(e => e.Name).IsRequired();
+            entity.HasOne(e => e.Role)
+                .WithMany().HasForeignKey(e => e.RoleId)
+                .OnDelete(DeleteBehavior.Restrict).IsRequired();
+            entity.Property(e => e.UserName).IsRequired();
+            entity.Property(e => e.Password).IsRequired();
+            entity.Property(e => e.BirthDate).IsRequired().HasColumnType("timestamp without time zone");
+            entity.Property(e => e.NIK);
+            entity.Property(e => e.NPWP);
+            entity.Property(e => e.Address);
+            entity.Property(e => e.Village);
+            entity.Property(e => e.District);
+            entity.Property(e => e.City);
+            entity.Property(e => e.Province);
+            entity.Property(e => e.Email);
+            entity.Property(e => e.MobilePhone);
+            entity.Property(e => e.Religion);
+            entity.Property(e => e.Occupation).IsRequired();
+            entity.Property(e => e.UserStatus).IsRequired();
+            entity.Property(e => e.UserType).IsRequired();
+            entity.Property(e => e.ApprovalStatus).IsRequired();
+            entity.Property(e => e.Deleted).IsRequired();
+            entity.Property(e => e.CreatedDate).HasColumnType("timestamp without time zone");
+            entity.Property(e => e.CreatedUserId);
+            entity.Property(e => e.UpdatedDate).HasColumnType("timestamp without time zone");
+            entity.Property(e => e.UpdatedUserId);
+            entity.Property(e => e.DeletedDate).HasColumnType("timestamp without time zone");
+            entity.Property(e => e.DeletedUserId);
+            entity.HasIndex(o => o.Code).HasDatabaseName("IX_User_Code").IsUnique();
         });
 
     }

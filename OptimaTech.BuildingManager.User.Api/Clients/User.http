@@ -1,0 +1,82 @@
+@OptimaTech.BuildingManager.User.Api_HostAddress = https://localhost:7066/v1
+
+GET {{OptimaTech.BuildingManager.User.Api_HostAddress}}/users/
+Accept: application/json
+Tenant-Code: 00000000-0000-0000-0000-000000000001
+User-Code: 00000000-0000-0000-0000-000000000999
+
+###
+
+
+GET {{OptimaTech.BuildingManager.User.Api_HostAddress}}/users?name=Admin&page=1&pageSize=50
+Accept: application/json
+Tenant-Code: 00000000-0000-0000-0000-000000000001
+User-Code: 00000000-0000-0000-0000-000000000999
+
+###
+
+GET {{OptimaTech.BuildingManager.User.Api_HostAddress}}/users/d83e7197-3599-4441-ab26-446f77610af1
+Accept: application/json
+Tenant-Code: 00000000-0000-0000-0000-000000000001
+User-Code: 00000000-0000-0000-0000-000000000999
+
+###
+
+
+GET {{OptimaTech.BuildingManager.User.Api_HostAddress}}/users/83a01c58-24cc-40c9-8c1a-7432c8f08ef5
+Accept: application/json
+Tenant-Code: 00000000-0000-0000-0000-000000000001
+User-Code: 00000000-0000-0000-0000-000000000999
+
+###
+
+POST {{OptimaTech.BuildingManager.User.Api_HostAddress}}/users/
+Content-Type: application/json
+Tenant-Code: 00000000-0000-0000-0000-000000000001
+User-Code: 00000000-0000-0000-0000-000000000999
+
+{
+  "Code":"R001",
+  "Name":"Admin",
+  "RoleId": "83a01c58-24cc-40c9-8c1a-7432c8f08ef5",
+  "UserName":"admin.super",
+  "Email":"admin@optimatech.com",
+  "Password":"password",
+  "BirthDate":"2000-11-20",
+  "Religion":0,
+  "Occupation":"Staff",
+  "UserStatus": 2,
+  "UserType":"admin",
+  "ApprovalStatus": 1
+}
+###
+
+
+PUT {{OptimaTech.BuildingManager.User.Api_HostAddress}}/users/d83e7197-3599-4441-ab26-446f77610af1
+Content-Type: application/json
+Tenant-Code: 00000000-0000-0000-0000-000000000001
+User-Code: 00000000-0000-0000-0000-000000000999
+
+{
+  "Code":"U001",
+  "Name":"Admin Super",
+  "RoleId": "83a01c58-24cc-40c9-8c1a-7432c8f08ef5",
+  "UserName":"admin.super",
+  "Email":"admin@optimatech.com",
+  "Password":"password",
+  "BirthDate":"2000-11-20",
+  "Religion":0,
+  "Occupation":"Staff",
+  "UserStatus": 2,
+  "UserType":"admin",
+  "ApprovalStatus": 1
+}
+###
+
+
+DELETE {{OptimaTech.BuildingManager.User.Api_HostAddress}}/users/d83e7197-3599-4441-ab26-446f77610af1
+Content-Type: application/json
+Tenant-Code: 00000000-0000-0000-0000-000000000001
+User-Code: 00000000-0000-0000-0000-000000000999
+
+###

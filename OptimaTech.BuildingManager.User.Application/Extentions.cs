@@ -1,5 +1,6 @@
 using OptimaTech.BuildingManager.User.Application.Models;
 using OptimaTech.BuildingManager.User.Core.Entities;
+using CoreEntities = OptimaTech.BuildingManager.User.Core.Entities;
 
 namespace OptimaTech.BuildingManager.User.Application;
 
@@ -23,5 +24,10 @@ public static class Extensions
     public static Unit ToUnit(this UnitApplicationModel model)
     {
         return new Unit() { Id = model.Id, TenantId = model.TenantId, Code = model.Code, Name = model.Name, ProjectId = model.ProjectId, BuildingName = model.BuildingName, FloorNumber = model.FloorNumber, UnitNumber = model.UnitNumber, UnitStatus = model.UnitStatus, UnitType = model.UnitType };
+    }
+
+     public static CoreEntities.User ToUser(this UserApplicationModel model)
+    {
+        return new CoreEntities.User() { Id = model.Id, TenantId = model.TenantId, Code = model.Code, Name = model.Name, UserName = model.UserName, Email = model.Email, Password = model.Password, RoleId = model.RoleId, Occupation = model.Occupation, UserStatus = model.UserStatus, UserType = model.UserType, ApprovalStatus = model.ApprovalStatus, BirthDate = model.BirthDate };
     }
 }

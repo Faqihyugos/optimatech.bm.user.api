@@ -19,6 +19,7 @@ TenantServices.Add(builder);
 RoleServices.Add(builder);
 ProjectServices.Add(builder);
 UnitServices.Add(builder);
+UserServices.Add(builder);
 
 var app = builder.Build();
 
@@ -39,6 +40,7 @@ TenantRoute.Map(app);
 RoleRoute.Map(app);
 ProjectRoute.Map(app);
 UnitRoute.Map(app);
+UserRoute.Map(app);
 
 
 app.Run();
