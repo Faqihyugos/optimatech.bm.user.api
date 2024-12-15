@@ -20,6 +20,7 @@ RoleServices.Add(builder);
 ProjectServices.Add(builder);
 UnitServices.Add(builder);
 UserServices.Add(builder);
+UserUnitServices.Add(builder);
 
 var app = builder.Build();
 
@@ -41,6 +42,7 @@ RoleRoute.Map(app);
 ProjectRoute.Map(app);
 UnitRoute.Map(app);
 UserRoute.Map(app);
+UserUnitRoute.Map(app);
 
 
 app.Run();

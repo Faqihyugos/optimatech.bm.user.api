@@ -4,7 +4,7 @@ namespace OptimaTech.BuildingManager.User.Application.SelectParameters;
 
 public class UserSelectParameter : SelectParameterBase
 {
-     public Guid? RoleId { get; set; }
+    public Guid? RoleId { get; set; }
     public string? UserName { get; set; }
     public string? Password { get; set; }
     public DateTime? BirthDate { get; set; }

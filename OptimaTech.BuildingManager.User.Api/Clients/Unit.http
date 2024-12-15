@@ -1,0 +1,63 @@
+@OptimaTech.BuildingManager.User.Api_HostAddress = https://localhost:7066/v1
+
+GET {{OptimaTech.BuildingManager.User.Api_HostAddress}}/units/
+Accept: application/json
+Tenant-Code: 00000000-0000-0000-0000-000000000001
+User-Code: 00000000-0000-0000-0000-000000000999
+
+###
+
+
+GET {{OptimaTech.BuildingManager.User.Api_HostAddress}}/units?name=Admin&page=1&pageSize=50
+Accept: application/json
+Tenant-Code: 00000000-0000-0000-0000-000000000001
+User-Code: 00000000-0000-0000-0000-000000000999
+
+###
+
+GET {{OptimaTech.BuildingManager.User.Api_HostAddress}}/units/00000000-0000-0000-0000-000000000001
+Accept: application/json
+Tenant-Code: 00000000-0000-0000-0000-000000000001
+User-Code: 00000000-0000-0000-0000-000000000999
+
+###
+
+
+GET {{OptimaTech.BuildingManager.User.Api_HostAddress}}/units/83a01c58-24cc-40c9-8c1a-7432c8f08ef5
+Accept: application/json
+Tenant-Code: 00000000-0000-0000-0000-000000000001
+User-Code: 00000000-0000-0000-0000-000000000999
+
+###
+
+POST {{OptimaTech.BuildingManager.User.Api_HostAddress}}/units/
+Content-Type: application/json
+Tenant-Code: 00000000-0000-0000-0000-000000000001
+User-Code: 00000000-0000-0000-0000-000000000999
+
+{
+  "Code":"U001",
+  "Name":"Mall",
+  "ProjectId":"00000000-0000-0000-0000-000000000001",
+}
+###
+
+
+PUT {{OptimaTech.BuildingManager.User.Api_HostAddress}}/units/83a01c58-24cc-40c9-8c1a-7432c8f08ef5
+Content-Type: application/json
+Tenant-Code: 00000000-0000-0000-0000-000000000001
+User-Code: 00000000-0000-0000-0000-000000000999
+
+{
+  "Code":"R001",
+  "Name":"Super-Admin"
+}
+###
+
+
+DELETE {{OptimaTech.BuildingManager.User.Api_HostAddress}}/units/83a01c58-24cc-40c9-8c1a-7432c8f08ef5
+Content-Type: application/json
+Tenant-Code: 00000000-0000-0000-0000-000000000001
+User-Code: 00000000-0000-0000-0000-000000000999
+
+###

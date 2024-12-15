@@ -7,7 +7,8 @@ using OptimaTech.BuildingManager.User.Application.UseCases.Users;
 using CoreEntities = OptimaTech.BuildingManager.User.Core.Entities;
 using OptimaTech.BuildingManager.User.Core.Validators;
 using OptimaTech.BuildingManager.User.Infrastructure.Repositories;
-using OptimaTech.BuildingManager.User.Infrastructure.UserUnitOfWork;
+using OptimaTech.BuildingManager.User.Infrastructure;
+using UnitOfWork = OptimaTech.BuildingManager.User.Infrastructure.UnitOfWork;
 
 namespace OptimaTech.BuildingManager.User.Api.Services;
 
@@ -19,7 +20,7 @@ public static class UserServices
         builder.Services.AddScoped<IBusinessRepository<UserApplicationModel>, UserRepository>();
 
         // Add Unit Of Work
-        builder.Services.AddScoped<IUnitOfWork<UserApplicationModel>, UserUnitOfWork>();
+        builder.Services.AddScoped<IUnitOfWork<UserApplicationModel>, UnitOfWork.UserUnitOfWork>();
 
         // Add Use Cases
         builder.Services.AddScoped<IUseCase<Guid, UserApplicationModel>, FindUserUseCase>();

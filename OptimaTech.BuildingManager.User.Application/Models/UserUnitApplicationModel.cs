@@ -1,6 +1,8 @@
-namespace OptimaTech.BuildingManager.User.Core.Entities;
+using OptimaTech.BuildingManager.User.Core.Entities;
 
-public class UserUnit : EntityBase
+namespace OptimaTech.BuildingManager.User.Application.Models;
+
+public class UserUnitApplicationModel : ApplicationModelBase
 {
     public required Guid UserId { get; set; }
     public required Guid UnitId { get; set; }
@@ -12,6 +14,6 @@ public class UserUnit : EntityBase
     public required DateTime DateBAST { get; set; }
 
 
-    public User? User{ get; set; }
-    public Unit? Unit { get; set; }
+    public UserApplicationModel? User{ get; set; }
+    public UnitApplicationModel? Unit { get; set; }
 }
