@@ -98,8 +98,8 @@ public static class UnitRoute
         {
             bool result = await useCase.Execute(unit);
 
-            UnitResponse UnitResponse = new UnitResponse() { Id = unit.Id, Code = unit.Code, Name = unit.Name, ProjectId = unit.ProjectId, BuildingName = unit.BuildingName, UnitNumber = unit.UnitNumber, FloorNumber = unit.FloorNumber, UnitType = unit.UnitType, UnitStatus = unit.UnitStatus };
-            ApiResponse<UnitResponse> apiResponse = new ApiResponse<UnitResponse>() { IsSuccess = true, StatusCode = 200, StatusMessages = new List<string>(), Data = UnitResponse };
+            UnitResponse unitResponse = new UnitResponse() { Id = unit.Id, Code = unit.Code, Name = unit.Name, ProjectId = unit.ProjectId, BuildingName = unit.BuildingName, UnitNumber = unit.UnitNumber, FloorNumber = unit.FloorNumber, UnitType = unit.UnitType, UnitStatus = unit.UnitStatus };
+            ApiResponse<UnitResponse> apiResponse = new ApiResponse<UnitResponse>() { IsSuccess = true, StatusCode = 200, StatusMessages = new List<string>(), Data = unitResponse };
 
             return TypedResults.Created($"/units/{unit.Id}", apiResponse);
         }
