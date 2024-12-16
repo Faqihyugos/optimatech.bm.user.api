@@ -146,8 +146,8 @@ public class AppDbContext : DbContext
             entity.Property(e => e.RelationType).IsRequired();
             entity.Property(e => e.RelationStatus).IsRequired();
             entity.Property(e => e.NoBAST).IsRequired();
-            entity.Property(e => e.DateBAST).IsRequired();
-              entity.Property(e => e.Deleted).IsRequired();
+            entity.Property(e => e.DateBAST).IsRequired().HasColumnType("timestamp without time zone");
+            entity.Property(e => e.Deleted).IsRequired();
             entity.Property(e => e.CreatedDate).HasColumnType("timestamp without time zone");
             entity.Property(e => e.CreatedUserId);
             entity.Property(e => e.UpdatedDate).HasColumnType("timestamp without time zone");

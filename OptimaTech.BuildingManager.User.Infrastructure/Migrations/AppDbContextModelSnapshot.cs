@@ -360,7 +360,7 @@ namespace OptimaTech.BuildingManager.User.Infrastructure.Migrations
                         .HasColumnType("uuid");
 
                     b.Property<DateTime>("DateBAST")
-                        .HasColumnType("timestamp with time zone");
+                        .HasColumnType("timestamp without time zone");
 
                     b.Property<bool>("Deleted")
                         .HasColumnType("boolean");

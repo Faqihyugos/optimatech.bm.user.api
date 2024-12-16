@@ -12,7 +12,7 @@ using OptimaTech.BuildingManager.User.Infrastructure.Repositories;
 namespace OptimaTech.BuildingManager.User.Infrastructure.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20241212014401_UserUnitCreate")]
+    [Migration("20241216021045_UserUnitCreate")]
     partial class UserUnitCreate
     {
         /// <inheritdoc />
@@ -363,7 +363,7 @@ namespace OptimaTech.BuildingManager.User.Infrastructure.Migrations
                         .HasColumnType("uuid");
 
                     b.Property<DateTime>("DateBAST")
-                        .HasColumnType("timestamp with time zone");
+                        .HasColumnType("timestamp without time zone");
 
                     b.Property<bool>("Deleted")
                         .HasColumnType("boolean");

@@ -23,7 +23,7 @@ namespace OptimaTech.BuildingManager.User.Infrastructure.Migrations
                     RelationType = table.Column<int>(type: "integer", nullable: false),
                     RelationStatus = table.Column<int>(type: "integer", nullable: false),
                     NoBAST = table.Column<string>(type: "text", nullable: false),
-                    DateBAST = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    DateBAST = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
                     TenantId = table.Column<Guid>(type: "uuid", nullable: false),
                     Code = table.Column<string>(type: "text", nullable: false),
                     Name = table.Column<string>(type: "text", nullable: false),

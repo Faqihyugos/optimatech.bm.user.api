@@ -102,7 +102,7 @@ public static class UserUnitRoute
             TenantId = tenantId,
             Code = request.Code,
             Name = request.Name,
-            UserId = userId,
+            UserId = request.UserId,
             UnitId = request.UnitId,
             NoBAST = request.NoBAST,
             DateBAST = request.DateBAST,
@@ -110,6 +110,7 @@ public static class UserUnitRoute
             StartDate = request.StartDate,
             RelationType = request.RelationType,
             RelationStatus = request.RelationStatus,
+
             Deleted = false,
             CreatedDate = DateTime.Now,
             CreatedUserId = userId
@@ -122,7 +123,7 @@ public static class UserUnitRoute
             UserUnitResponse userUnitResponse = new UserUnitResponse()
             {
                 Id = userUnit.Id,
-                UserId = userId,
+                UserId = userUnit.UserId,
                 UnitId = userUnit.UnitId,
                 Code = userUnit.Code,
                 Name = userUnit.Name,
@@ -131,8 +132,7 @@ public static class UserUnitRoute
                 EndDate = userUnit.EndDate,
                 StartDate = userUnit.StartDate,
                 RelationType = userUnit.RelationType,
-                RelationStatus = userUnit.RelationStatus
-              
+                RelationStatus = userUnit.RelationStatus,
             };
             ApiResponse<UserUnitResponse> apiResponse = new ApiResponse<UserUnitResponse>() { IsSuccess = true, StatusCode = 200, StatusMessages = new List<string>(), Data = userUnitResponse };
 
@@ -154,7 +154,7 @@ public static class UserUnitRoute
             TenantId = tenantId,
             Code = request.Code,
             Name = request.Name,
-            UserId = userId,
+            UserId = request.UserId,
             UnitId = request.UnitId,
             NoBAST = request.NoBAST,
             DateBAST = request.DateBAST,
@@ -162,7 +162,6 @@ public static class UserUnitRoute
             StartDate = request.StartDate,
             RelationType = request.RelationType,
             RelationStatus = request.RelationStatus,
-
             Deleted = false,
             UpdatedDate = DateTime.Now,
             UpdatedUserId = userId
