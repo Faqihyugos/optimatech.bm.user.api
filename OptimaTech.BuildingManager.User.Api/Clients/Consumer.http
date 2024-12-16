@@ -1,0 +1,64 @@
+@OptimaTech.BuildingManager.User.Api_HostAddress = https://localhost:7066/v1
+
+GET {{OptimaTech.BuildingManager.User.Api_HostAddress}}/consumers/
+Accept: application/json
+Tenant-Code: 00000000-0000-0000-0000-000000000001
+User-Code: 00000000-0000-0000-0000-000000000999
+
+###
+
+
+GET {{OptimaTech.BuildingManager.User.Api_HostAddress}}/consumers?name=User&page=1&pageSize=50
+Accept: application/json
+Tenant-Code: 00000000-0000-0000-0000-000000000001
+User-Code: 00000000-0000-0000-0000-000000000999
+
+###
+
+GET {{OptimaTech.BuildingManager.User.Api_HostAddress}}/consumers/bd2f8d50-d155-40c0-8cfb-8b67b90c89ef
+Accept: application/json
+Tenant-Code: 00000000-0000-0000-0000-000000000001
+User-Code: 00000000-0000-0000-0000-000000000999
+
+###
+
+
+GET {{OptimaTech.BuildingManager.User.Api_HostAddress}}/consumers/83a01c58-24cc-40c9-8c1a-7432c8f08ef5
+Accept: application/json
+Tenant-Code: 00000000-0000-0000-0000-000000000001
+User-Code: 00000000-0000-0000-0000-000000000999
+
+###
+
+POST {{OptimaTech.BuildingManager.User.Api_HostAddress}}/consumers/
+Content-Type: application/json
+Tenant-Code: 00000000-0000-0000-0000-000000000001
+User-Code: 00000000-0000-0000-0000-000000000999
+
+{
+  "Code":"C002",
+  "Name":"User2",
+  "UserId":"d83e7197-3599-4441-ab26-446f77610af1"
+}
+###
+
+
+PUT {{OptimaTech.BuildingManager.User.Api_HostAddress}}/consumers/e167335c-01fb-4dbf-b414-5addaa76bddd
+Content-Type: application/json
+Tenant-Code: 00000000-0000-0000-0000-000000000001
+User-Code: 00000000-0000-0000-0000-000000000999
+
+{
+  "Code":"C001",
+  "Name":"UserA",
+  "UserId":"d83e7197-3599-4441-ab26-446f77610af1"
+}
+###
+
+
+DELETE {{OptimaTech.BuildingManager.User.Api_HostAddress}}/consumers/bd2f8d50-d155-40c0-8cfb-8b67b90c89ef
+Content-Type: application/json
+Tenant-Code: 00000000-0000-0000-0000-000000000001
+User-Code: 00000000-0000-0000-0000-000000000999
+
+###

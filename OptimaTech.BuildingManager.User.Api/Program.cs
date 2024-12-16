@@ -21,6 +21,7 @@ ProjectServices.Add(builder);
 UnitServices.Add(builder);
 UserServices.Add(builder);
 UserUnitServices.Add(builder);
+ConsumerServices.Add(builder);
 
 var app = builder.Build();
 
@@ -43,6 +44,7 @@ ProjectRoute.Map(app);
 UnitRoute.Map(app);
 UserRoute.Map(app);
 UserUnitRoute.Map(app);
+ConsumerRoute.Map(app);
 
 
 app.Run();

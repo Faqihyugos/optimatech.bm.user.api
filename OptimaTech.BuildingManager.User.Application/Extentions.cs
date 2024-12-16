@@ -35,4 +35,9 @@ public static class Extensions
     {
         return new UserUnit() { Id = model.Id, TenantId = model.TenantId, Code = model.Code, Name = model.Name, UserId = model.UserId, UnitId = model.UnitId, StartDate = model.StartDate, EndDate = model.EndDate, RelationType = model.RelationType, RelationStatus = model.RelationStatus, NoBAST = model.NoBAST, DateBAST = model.DateBAST };
     }
+
+    public static Consumer ToConsumer(this ConsumerApplicationModel model)
+    {
+        return new Consumer() { Id = model.Id, TenantId = model.TenantId, Code = model.Code, Name = model.Name, UserId = model.UserId };
+    }
 }

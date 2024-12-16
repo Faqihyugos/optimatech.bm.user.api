@@ -12,6 +12,7 @@ public class AppDbContext : DbContext
     public DbSet<UnitApplicationModel> Units { get; set; }
     public DbSet<UserApplicationModel> Users { get; set; }
     public DbSet<UserUnitApplicationModel> UserUnits { get; set; }
+    public DbSet<ConsumerApplicationModel> Consumers { get; set; }
 
     public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
     {
@@ -155,6 +156,24 @@ public class AppDbContext : DbContext
             entity.Property(e => e.DeletedDate).HasColumnType("timestamp without time zone");
             entity.Property(e => e.DeletedUserId);
             entity.HasIndex(o => o.Code).HasDatabaseName("IX_UserUnit_Code").IsUnique();
+        });
+
+        modelBuilder.Entity<ConsumerApplicationModel>(entity =>
+        {
+            entity.HasKey(e => e.Id);
+            entity.Property(e => e.Code).IsRequired();
+            entity.Property(e => e.Name).IsRequired();
+            entity.HasOne(e => e.User)
+                .WithMany().HasForeignKey(e => e.UserId)
+                .OnDelete(DeleteBehavior.Restrict).IsRequired();
+            entity.Property(e => e.Deleted).IsRequired();
+            entity.Property(e => e.CreatedDate).HasColumnType("timestamp without time zone");
+            entity.Property(e => e.CreatedUserId);
+            entity.Property(e => e.UpdatedDate).HasColumnType("timestamp without time zone");
+            entity.Property(e => e.UpdatedUserId);
+            entity.Property(e => e.DeletedDate).HasColumnType("timestamp without time zone");
+            entity.Property(e => e.DeletedUserId);
+            entity.HasIndex(o => o.Code).HasDatabaseName("IX_Consumer_Code").IsUnique();
         });
 
     }
